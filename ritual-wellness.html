@@ -1,0 +1,2304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trusted Rituals — Elevate Your Metabolism</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --crimson: #b5154b;
+      --crimson-dark: #8a0f38;
+      --pink-light: #fce8ef;
+      --pink-bg: #fdf0f5;
+      --green: #3a5c2e;
+      --green-light: #8aab5e;
+      --sage: #a8bf8c;
+      --teal: #4a8a8a;
+      --cream: #faf6f0;
+      --dark: #1a1a1a;
+      --text-muted: #666;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--pink-bg);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ====== NAV ====== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+      background: rgba(253, 240, 245, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(181, 21, 75, 0.1);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--crimson);
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--dark);
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--crimson);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-icon {
+      font-size: 18px;
+      cursor: pointer;
+      color: var(--dark);
+    }
+
+    .btn-signup {
+      background: var(--crimson);
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-signup:hover {
+      background: var(--crimson-dark);
+      transform: translateY(-1px);
+    }
+
+    /* ====== HERO ====== */
+    .hero {
+      min-height: 100vh;
+      padding: 120px 40px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background: var(--pink-bg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(138, 171, 94, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--crimson);
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(44px, 6vw, 80px);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -2px;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 380px;
+      margin-bottom: 36px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--crimson);
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--crimson-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--crimson);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: 1.5px solid var(--crimson);
+      cursor: pointer;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--pink-light);
+    }
+
+    /* Hero right - product card */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: var(--green);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 440px;
+      aspect-ratio: 1/1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.08), transparent 60%);
+    }
+
+    .hero-product-mockup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .product-badge-hero {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .product-bottle {
+      background: white;
+      width: 140px;
+      height: 180px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-bottle-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .product-bottle-icon {
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+
+    .product-bottle-name {
+      font-size: 8px;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 1.5px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .hero-review-card {
+      position: absolute;
+      bottom: -20px;
+      left: -30px;
+      background: white;
+      border-radius: 16px;
+      padding: 16px 20px;
+      width: 220px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    .review-stars {
+      color: #f4b942;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .review-label {
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--crimson);
+      margin-bottom: 6px;
+    }
+
+    .review-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--dark);
+    }
+
+    /* ====== SECTION COMMONS ====== */
+    section {
+      padding: 80px 40px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: var(--dark);
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .view-all {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--crimson);
+      text-decoration: none;
+      border-bottom: 1px solid var(--crimson);
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+
+    .view-all:hover {
+      opacity: 0.7;
+    }
+
+    /* ====== TOP SELLERS ====== */
+    .top-sellers {
+      background: var(--pink-bg);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 20px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .product-info {
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--crimson);
+      margin-bottom: 12px;
+    }
+
+    .product-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .product-desc {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      flex: 1;
+    }
+
+    .btn-buy {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--crimson);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 12px 22px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      width: fit-content;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-buy:hover {
+      background: var(--crimson-dark);
+      transform: translateY(-1px);
+    }
+
+    .product-image-area {
+      background: #c8e6a0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 260px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-image-area.green-bg {
+      background: #8fad6e;
+    }
+
+    .product-image-area.teal-bg {
+      background: #5da0a0;
+    }
+
+    .product-image-area.dark-bg {
+      background: var(--green);
+    }
+
+    .product-image-area.beige-bg {
+      background: #e8d5b0;
+    }
+
+    .product-emoji-display {
+      font-size: 80px;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+      animation: gentlebob 3s ease-in-out infinite;
+    }
+
+    @keyframes gentlebob {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-8px) rotate(2deg);
+      }
+    }
+
+    .product-card-small {
+      flex-direction: column;
+    }
+
+    .product-card-small .product-image-area {
+      min-height: 200px;
+    }
+
+    .product-card-small .product-info {
+      padding: 24px;
+    }
+
+    .product-card-small .product-name {
+      font-size: 22px;
+    }
+
+    /* ====== VALUE PROPS ====== */
+    .value-section {
+      background: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      padding: 0;
+    }
+
+    .value-item {
+      padding: 60px 48px;
+      border-right: 1px solid var(--pink-light);
+      position: relative;
+    }
+
+    .value-item:last-child {
+      border-right: none;
+    }
+
+    .value-item.center-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--pink-bg);
+      padding: 0;
+    }
+
+    .value-center-visual {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      background: linear-gradient(135deg, #c8e6a0, #8fad6e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 120px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .value-center-visual::after {
+      content: 'BIO AVAILABLE\nINGREDIENTS\nsafe for work';
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.6);
+      white-space: pre;
+      line-height: 1.8;
+    }
+
+    .value-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--pink-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .value-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+
+    .value-text {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .value-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--pink-light);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--crimson);
+    }
+
+    /* ====== PRODUCT PAGE STRIP ====== */
+    .pdp-strip {
+      background: var(--pink-bg);
+      padding: 80px 40px;
+    }
+
+    .pdp-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+    }
+
+    .pdp-image-side {
+      background: #d4e8a0;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 140px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pdp-image-side::before {
+      content: 'ACV MATCHA\nGUMMIES';
+      position: absolute;
+      top: 24px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.5);
+      white-space: pre;
+      line-height: 2;
+    }
+
+    .pdp-image-side::after {
+      content: 'SAFE FOR ANY GUMMY LOVERS';
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    .pdp-info {
+      padding: 48px 48px 48px 0;
+    }
+
+    .pdp-bestseller {
+      display: inline-block;
+      background: var(--pink-light);
+      color: var(--crimson);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .pdp-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 46px;
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -1.5px;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .pdp-stars {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .stars {
+      color: #f4b942;
+      font-size: 14px;
+    }
+
+    .review-count {
+      font-size: 13px;
+      color: var(--crimson);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .pdp-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--pink-light);
+      padding-bottom: 28px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .price-current {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--crimson);
+    }
+
+    .price-original {
+      font-size: 16px;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    .price-save {
+      background: var(--green-light);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .qty-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .qty-control {
+      display: flex;
+      align-items: center;
+      border: 1.5px solid var(--pink-light);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .qty-btn {
+      width: 40px;
+      height: 44px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: var(--dark);
+      transition: background 0.15s;
+    }
+
+    .qty-btn:hover {
+      background: var(--pink-light);
+    }
+
+    .qty-num {
+      width: 44px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .btn-cart {
+      flex: 1;
+      background: var(--crimson);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 0 28px;
+      height: 44px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+
+    .btn-cart:hover {
+      background: var(--crimson-dark);
+    }
+
+    .pdp-badges {
+      display: flex;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .pdp-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex: 1;
+      background: var(--pink-bg);
+      border-radius: 12px;
+      padding: 16px 12px;
+    }
+
+    .pdp-badge-icon {
+      font-size: 22px;
+    }
+
+    .pdp-badge-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--dark);
+      text-align: center;
+    }
+
+    /* ====== PROTOCOL ====== */
+    .protocol-section {
+      background: white;
+      text-align: center;
+    }
+
+    .protocol-section .section-title {
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
+
+    .protocol-section .section-sub {
+      margin-bottom: 48px;
+    }
+
+    .protocol-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .protocol-card {
+      background: var(--pink-bg);
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: left;
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    .protocol-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .protocol-card.active {
+      background: white;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+      border: 1.5px solid var(--pink-light);
+    }
+
+    .protocol-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 72px;
+      font-weight: 900;
+      color: var(--pink-light);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .protocol-card.active .protocol-num {
+      color: rgba(181, 21, 75, 0.15);
+    }
+
+    .protocol-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .protocol-text {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    /* ====== REVIEWS ====== */
+    .reviews-section {
+      background: var(--pink-bg);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 16px;
+    }
+
+    .review-card {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      transition: transform 0.2s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .review-card.featured {
+      background: var(--crimson);
+      grid-row: span 1;
+    }
+
+    .review-card.featured .review-card-text,
+    .review-card.featured .reviewer-name {
+      color: white;
+    }
+
+    .review-card.featured .rv-stars {
+      color: #ffcc66;
+    }
+
+    .review-card.stat-card {
+      background: var(--crimson);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+      grid-column: span 2;
+    }
+
+    .rv-stars {
+      color: #f4b942;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .review-card-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .reviewer-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--pink-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .reviewer-name {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--dark);
+    }
+
+    .reviewer-tag {
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 900;
+      color: white;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.4;
+    }
+
+    .teal-card {
+      background: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .teal-card-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    /* ====== BOUTIQUE / SHOP ====== */
+    .boutique-section {
+      background: white;
+    }
+
+    .boutique-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 60px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .boutique-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin-bottom: 32px;
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .pill {
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .pill.active {
+      background: var(--crimson);
+      color: white;
+      border: 1.5px solid var(--crimson);
+    }
+
+    .pill.inactive {
+      background: none;
+      color: var(--dark);
+      border: 1.5px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .pill.inactive:hover {
+      border-color: var(--crimson);
+      color: var(--crimson);
+    }
+
+    .boutique-featured {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .boutique-card {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.25s;
+    }
+
+    .boutique-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .boutique-card-img {
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      position: relative;
+    }
+
+    .boutique-card-img.green-bg {
+      background: #b8d98c;
+    }
+
+    .boutique-card-img.blue-bg {
+      background: #b8cfe0;
+    }
+
+    .boutique-card-body {
+      padding: 20px 24px;
+      background: white;
+    }
+
+    .boutique-category {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .boutique-product-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .boutique-product-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .price-add-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .boutique-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .btn-add {
+      background: var(--crimson);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+
+    .btn-add:hover {
+      background: var(--crimson-dark);
+    }
+
+    .btn-add-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--crimson);
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .btn-add-icon:hover {
+      background: var(--crimson-dark);
+    }
+
+    /* Featured horizontal card */
+    .boutique-horizontal {
+      background: var(--pink-bg);
+      border-radius: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .horiz-img {
+      background: #2a2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 90px;
+      min-height: 280px;
+      position: relative;
+    }
+
+    .horiz-info {
+      padding: 40px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .horiz-category {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .horiz-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--crimson);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .horiz-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .horiz-price-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .horiz-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--crimson);
+    }
+
+    .horiz-price-old {
+      font-size: 16px;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    /* Small product grid */
+    .boutique-small-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .small-product-card {
+      background: var(--pink-bg);
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .small-product-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .small-product-img {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+    }
+
+    .small-product-img.amber-bg {
+      background: #f0c880;
+    }
+
+    .small-product-img.dark-green-bg {
+      background: #2a4020;
+    }
+
+    .small-product-img.white-bg {
+      background: #e8eef0;
+    }
+
+    .small-product-body {
+      padding: 16px 20px;
+    }
+
+    .small-product-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .small-product-sub {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .small-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .small-price {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .small-add {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--crimson);
+      text-decoration: underline;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+    }
+
+    /* ====== CTA BAND ====== */
+    .cta-band {
+      background: var(--crimson);
+      margin: 0 40px;
+      border-radius: 24px;
+      padding: 72px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 900;
+      color: white;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+    }
+
+    .cta-perks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cta-perk {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .cta-perk-icon {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 16px;
+      margin-top: 2px;
+    }
+
+    .cta-perk-text {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 14px;
+    }
+
+    .cta-perk-bold {
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+      display: block;
+    }
+
+    .cta-visual {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .cta-bottle {
+      font-size: 70px;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--crimson);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+    }
+
+    .btn-white:hover {
+      opacity: 0.9;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: border-color 0.2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: white;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background: var(--crimson);
+      padding: 56px 40px 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand-desc {
+      font-size: 12px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.65);
+      max-width: 220px;
+    }
+
+    .footer-col-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copy {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: none;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .social-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      border-color: white;
+    }
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-content>* {
+      animation: fadeUp 0.7s ease forwards;
+      opacity: 0;
+    }
+
+    .hero-label {
+      animation-delay: 0.1s;
+    }
+
+    /* ====== RESPONSIVENESS ====== */
+    .mobile-nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--crimson);
+      z-index: 1001;
+    }
+
+    @media (max-width: 1024px) {
+      nav {
+        padding: 16px 24px;
+      }
+
+      .hero {
+        padding: 100px 24px 60px;
+        gap: 24px;
+      }
+
+      section {
+        padding: 60px 24px;
+      }
+
+      .products-grid,
+      .boutique-featured,
+      .cta-band {
+        gap: 16px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--pink-bg);
+        flex-direction: column;
+        padding: 100px 40px;
+        gap: 24px;
+        transition: right 0.3s ease;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .nav-right {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        min-height: auto;
+        padding-top: 100px;
+      }
+
+      .hero-desc {
+        margin: 0 auto 36px;
+      }
+
+      .hero-ctas {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        margin-top: 40px;
+      }
+
+      .hero-review-card {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+      }
+
+      @keyframes float {
+
+        0%,
+        100% {
+          transform: translate(-50%, 0);
+        }
+
+        50% {
+          transform: translate(-50%, -8px);
+        }
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .products-grid,
+      .boutique-featured,
+      .protocol-grid,
+      .reviews-grid,
+      .boutique-small-grid,
+      .cta-band,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card-main {
+        grid-template-columns: 1fr;
+      }
+
+      .product-info {
+        padding: 24px;
+      }
+
+      .value-section {
+        grid-template-columns: 1fr;
+      }
+
+      .value-item {
+        border-right: none;
+        border-bottom: 1px solid var(--pink-light);
+        padding: 40px 24px;
+      }
+
+      .value-item.center-item {
+        display: none;
+      }
+
+      .pdp-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .pdp-info {
+        padding: 24px;
+      }
+
+      .pdp-image-side {
+        min-height: 300px;
+      }
+
+      .review-card.stat-card {
+        grid-column: span 1;
+      }
+
+      .boutique-horizontal {
+        grid-template-columns: 1fr;
+      }
+
+      .horiz-info {
+        padding: 24px;
+      }
+
+      .cta-band {
+        margin: 0 20px 60px;
+        padding: 40px 24px;
+      }
+
+      .cta-title {
+        font-size: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+
+    .hero-title {
+      animation-delay: 0.2s;
+    }
+
+    .hero-desc {
+      animation-delay: 0.3s;
+    }
+
+    .hero-ctas {
+      animation-delay: 0.4s;
+    }
+
+    .hero-visual {
+      animation: fadeUp 0.8s 0.3s ease forwards;
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Trusted Rituals</div>
+    <button class="mobile-nav-toggle">☰</button>
+    <ul class="nav-links">
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Journal</a></li>
+      <li><a href="#">Science</a></li>
+      <li><a href="#">Membership</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-icon">🔍</span>
+      <button class="btn-signup">Sign Up</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-label">New Rituals Released</p>
+      <h1 class="hero-title">Elevate Your<br>Metabolism.</h1>
+      <p class="hero-desc">Introducing the ACV Matcha and GLP-1 Patches. Science-backed rituals designed for the
+        high-performance life.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary">Shop the Collection</button>
+        <button class="btn-outline">View Science</button>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-product-mockup">
+          <div class="product-badge-hero">
+            RITU<br>XU M<br>ER
+          </div>
+          <div class="product-bottle">
+            <div class="product-bottle-logo">Ritual Wellness</div>
+            <div class="product-bottle-icon">🌿</div>
+            <div class="product-bottle-name">ACV Matcha<br>Daily Formula</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-review-card">
+        <div class="review-label">⭐ Editor's Choice 2024</div>
+        <div class="review-text">"The first metabolic patch that actually fits my lifestyle."</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP SELLERS -->
+  <section class="top-sellers">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Top Sellers</h2>
+        <p class="section-sub">The daily rituals transforming thousands of lives.</p>
+      </div>
+      <a href="#" class="view-all">View All Shop</a>
+    </div>
+
+    <div class="products-grid">
+      <!-- Main product -->
+      <div class="product-card">
+        <div class="product-card-main">
+          <div class="product-info">
+            <div>
+              <p class="product-tag">Best Seller</p>
+              <h3 class="product-name">ACV Matcha</h3>
+              <p class="product-desc">Ceremonial grade matcha blended with raw apple cider vinegar for sustained energy
+                and metabolic health — without the crash.</p>
+            </div>
+            <button class="btn-buy">Buy Now — $48</button>
+          </div>
+          <div class="product-image-area green-bg">
+            <div class="product-emoji-display">🍵</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Small product -->
+      <div class="product-card product-card-small">
+        <div class="product-image-area teal-bg" style="min-height:200px;">
+          <div class="product-emoji-display" style="font-size:60px;">🩹</div>
+        </div>
+        <div class="product-info" style="padding:24px;">
+          <div>
+            <p class="product-tag">Metabolic Support</p>
+            <h3 class="product-name">GLP-1 Patches</h3>
+            <p class="product-desc">Time-released metabolic support.</p>
+          </div>
+          <button class="btn-buy" style="margin-top:16px;">Buy Now — $62</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPS -->
+  <div class="value-section">
+    <div class="value-item">
+      <div class="value-icon">🧪</div>
+      <h3 class="value-title">Bio-Available<br>Ingredients.</h3>
+      <p class="value-text">We prioritize absorption over dosage. Our unique delivery systems ensure that every nutrient
+        reaches its destination in the body.</p>
+      <div class="value-chip">✓ Lab Certified</div>
+    </div>
+
+    <div class="value-item center-item">
+      <div class="value-center-visual">🌱</div>
+    </div>
+
+    <div class="value-item" style="border-right:none;">
+      <div class="value-icon">📊</div>
+      <h3 class="value-title">Real Results.</h3>
+      <p class="value-text">Our community reports a 40% increase in sustained energy levels within the first two weeks
+        of daily use.</p>
+      <div class="value-chip">📈 Data Driven</div>
+      <div style="margin-top:32px;">
+        <div class="value-icon" style="margin-bottom:12px;">🌅</div>
+        <h3 class="value-title">Modern<br>Rituals.</h3>
+        <p class="value-text">Wellness shouldn't feel like a chore. Our products are designed to integrate seamlessly
+          into your morning routine.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDP STRIP -->
+  <section class="pdp-strip">
+    <div class="pdp-inner">
+      <div class="pdp-image-side">🍬</div>
+
+      <div class="pdp-info">
+        <span class="pdp-bestseller">Best Seller</span>
+        <h2 class="pdp-title">ACV Matcha<br>Gummies</h2>
+        <div class="pdp-stars">
+          <span class="stars">★★★★★</span>
+          <a class="review-count">(1,248 Reviews)</a>
+        </div>
+        <p class="pdp-desc">Harness the metabolism-boosting power of organic Apple Cider Vinegar paired with the clean,
+          sustained energy of Ceremonial Grade Matcha. A daily ritual that tastes like paradise.</p>
+
+        <div class="price-row">
+          <span class="price-current">$38.00</span>
+          <span class="price-original">$45.00</span>
+          <span class="price-save">Save 15% Today</span>
+        </div>
+
+        <div class="qty-row">
+          <div class="qty-control">
+            <button class="qty-btn" onclick="changeQty(-1)">−</button>
+            <span class="qty-num" id="qty">1</span>
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
+          </div>
+          <button class="btn-cart">Add to Cart</button>
+        </div>
+
+        <div class="pdp-badges">
+          <div class="pdp-badge">
+            <span class="pdp-badge-icon">⚡</span>
+            <span class="pdp-badge-label">Metabolism</span>
+          </div>
+          <div class="pdp-badge">
+            <span class="pdp-badge-icon">🌿</span>
+            <span class="pdp-badge-label">100% Organic</span>
+          </div>
+          <div class="pdp-badge">
+            <span class="pdp-badge-icon">❤️</span>
+            <span class="pdp-badge-label">Heart Health</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTOCOL -->
+  <section class="protocol-section">
+    <h2 class="section-title">The Daily Protocol</h2>
+    <p class="section-sub">Optimize your results with our recommended wellness routine designed for high-performance
+      living.</p>
+
+    <div class="protocol-grid">
+      <div class="protocol-card">
+        <div class="protocol-num">01</div>
+        <div class="protocol-name">Morning Rise</div>
+        <p class="protocol-text">Take 2 gummies upon waking to kickstart your metabolism and clear morning brain fog
+          with natural L-Theanine from Matcha.</p>
+      </div>
+      <div class="protocol-card active">
+        <div class="protocol-num">02</div>
+        <div class="protocol-name">Pre-Lunch</div>
+        <p class="protocol-text">Consume 1 gummy 20 minutes before your main meal to assist with glucose response and
+          digestive enzyme activation.</p>
+      </div>
+      <div class="protocol-card">
+        <div class="protocol-num">03</div>
+        <div class="protocol-name">Afternoon Glow</div>
+        <p class="protocol-text">A final gummy at 3 PM provides a crash-free energy lift to carry you through the rest
+          of your productive day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Ritual Voices</h2>
+        <p class="section-sub">Real people, real results.</p>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card featured">
+        <div class="rv-stars">★★★★★</div>
+        <p class="review-card-text">"I've tried every ACV supplement on the market. Nothing compares to the taste and
+          the immediate energy shift I feel from the Matcha blend. It's my favorite part of the day."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">👩</div>
+          <div>
+            <div class="reviewer-name" style="color:white;">Elena R.</div>
+            <div class="reviewer-tag" style="color:rgba(255,255,255,0.65);">Verified Customer</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="rv-stars">★★★★★</div>
+        <p class="review-card-text">"Finally, a gummy that isn't loaded with sugar. The flavor is sophisticated and the
+          results are real."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">👨</div>
+          <div>
+            <div class="reviewer-name">Marcus T.</div>
+            <div class="reviewer-tag">Verified Customer</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card teal-card">
+        <div style="font-size:40px;">🌿</div>
+        <div class="teal-card-text">Healthy<br>Healthy Lifestyle<br><span
+            style="color:rgba(255,255,255,0.7);font-size:13px;font-family:DM Sans;">Safe for work ✓</span></div>
+      </div>
+
+      <div class="review-card">
+        <div class="rv-stars">★★★★★</div>
+        <p class="review-card-text">"My digestion has never been better. The ACV bloat is gone and the Matcha focus is
+          amazing."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">👩</div>
+          <div>
+            <div class="reviewer-name">Sarah K.</div>
+            <div class="reviewer-tag">Verified Customer</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card stat-card">
+        <div>
+          <div class="stat-number">98%</div>
+          <div class="stat-label">of users report increased energy within 7 days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOUTIQUE / SHOP -->
+  <section class="boutique-section">
+    <h1 class="boutique-title">The Boutique.</h1>
+    <p class="boutique-desc">Experience high-performance wellness curated for the modern ritual. Every product is
+      grounded in science and elevated by design.</p>
+
+    <div class="filter-pills">
+      <button class="pill active">All Collections</button>
+      <button class="pill inactive">Digestive Health</button>
+      <button class="pill inactive">Metabolic Support</button>
+      <button class="pill inactive">Sleep & Recovery</button>
+    </div>
+
+    <div class="boutique-featured">
+      <div class="boutique-card">
+        <div class="boutique-card-img green-bg">🌿</div>
+        <div class="boutique-card-body">
+          <div class="boutique-category">Metabolic Catalyst</div>
+          <div class="boutique-product-name">ACV Matcha Elixir</div>
+          <p class="boutique-product-desc">The ultimate morning ritual. Ceremonial grade matcha blended with raw organic
+            ACV and prebiotic fiber.</p>
+          <div class="price-add-row">
+            <span class="boutique-price">$48.00</span>
+            <button class="btn-add">Quick Add +</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="boutique-card" style="background:#dce8f0;">
+        <div class="boutique-card-img blue-bg">🩹</div>
+        <div class="boutique-card-body">
+          <div class="boutique-category">Metabolic Support</div>
+          <div class="boutique-product-name">GLP-1 Patches</div>
+          <p class="boutique-product-desc">New Arrival. Pure, precision-dosed patches for sustained metabolic support.
+          </p>
+          <div class="price-add-row">
+            <span class="boutique-price">$72.00</span>
+            <button class="btn-add-icon">🛒</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Horizontal featured -->
+    <div class="boutique-horizontal">
+      <div class="horiz-img">🪵</div>
+      <div class="horiz-info">
+        <div class="horiz-category">Respiratory Ritual</div>
+        <h3 class="horiz-name">Mullein Honey<br>Ritual Sticks</h3>
+        <p class="horiz-desc">A traditional lung tonic reimagined for the modern explorer. Pure wildflower honey infused
+          with wildcrafted mullein leaf extract for effortless breathing.</p>
+        <div class="horiz-price-row">
+          <span class="horiz-price">$32.00</span>
+          <span class="horiz-price-old">$40.00</span>
+        </div>
+        <button class="btn-primary">Add to Ritual</button>
+      </div>
+    </div>
+
+    <!-- Small grid -->
+    <div class="boutique-small-grid" style="margin-top:20px;">
+      <div class="small-product-card">
+        <div class="small-product-img amber-bg">🌿</div>
+        <div class="small-product-body">
+          <div class="small-product-sub">Sleep & Recovery</div>
+          <div class="small-product-name">Restorative Mist</div>
+          <div class="small-price-row">
+            <span class="small-price">$24.00</span>
+            <span class="small-add">Add</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-product-card">
+        <div class="small-product-img dark-green-bg">🌾</div>
+        <div class="small-product-body">
+          <div class="small-product-sub">Gut Microbiome</div>
+          <div class="small-product-name">Vitality Grains</div>
+          <div class="small-price-row">
+            <span class="small-price">$19.00</span>
+            <span class="small-add">Add</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-product-card">
+        <div class="small-product-img white-bg">🛁</div>
+        <div class="small-product-body">
+          <div class="small-product-sub">Deep Muscle Relax</div>
+          <div class="small-product-name">Magnesium Soak</div>
+          <div class="small-price-row">
+            <span class="small-price">$38.00</span>
+            <span class="small-add">Add</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div>
+      <h2 class="cta-title">Your metabolic health, reimagined.</h2>
+      <ul class="cta-perks">
+        <li class="cta-perk">
+          <span class="cta-perk-icon">○</span>
+          <div>
+            <span class="cta-perk-bold">Sustainable Energy</span>
+            <span class="cta-perk-text">Zero jitters, zero crashes. Just clean focus.</span>
+          </div>
+        </li>
+        <li class="cta-perk">
+          <span class="cta-perk-icon">○</span>
+          <div>
+            <span class="cta-perk-bold">Appetite Control</span>
+            <span class="cta-perk-text">Clinically studied peptides for satiety.</span>
+          </div>
+        </li>
+        <li class="cta-perk">
+          <span class="cta-perk-icon">○</span>
+          <div>
+            <span class="cta-perk-bold">Cellular Renewal</span>
+            <span class="cta-perk-text">Antioxidant-rich formulas for longevity.</span>
+          </div>
+        </li>
+      </ul>
+      <div class="cta-actions">
+        <button class="btn-white">Subscribe & Save 20%</button>
+        <button class="btn-ghost">See the Benefits</button>
+      </div>
+    </div>
+    <div class="cta-visual">
+      <div style="text-align:center;">
+        <div style="font-size:80px; margin-bottom:8px;">🧴</div>
+        <div style="font-size:60px; margin-bottom:8px;">🫙</div>
+        <div style="font-size:50px;">🧪</div>
+        <p
+          style="color:rgba(255,255,255,0.7);font-size:11px;margin-top:16px;letter-spacing:1.5px;text-transform:uppercase;">
+          45,000+ Members</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Ritual Wellness</div>
+        <p class="footer-brand-desc">Pioneering the intersection of technology and ancient wellness traditions for the
+          modern ritual.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Shop</div>
+        <ul class="footer-links">
+          <li><a href="#">All Products</a></li>
+          <li><a href="#">Gummies</a></li>
+          <li><a href="#">Powders</a></li>
+          <li><a href="#">Bundles</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Support</div>
+        <ul class="footer-links">
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Wholesale</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Wholesale</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 Ritual Wellness. All rights reserved.</span>
+      <div class="footer-socials">
+        <button class="social-btn">✦</button>
+        <button class="social-btn">◎</button>
+        <button class="social-btn">▷</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      navToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+    });
+
+    // Close mobile nav when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navToggle.textContent = '☰';
+      });
+    });
+
+    // Qty control
+    function changeQty(delta) {
+      const el = document.getElementById('qty');
+      let val = parseInt(el.textContent) + delta;
+      if (val < 1) val = 1;
+      el.textContent = val;
+    }
+
+    // Filter pills
+    document.querySelectorAll('.pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.pill').forEach(p => {
+          p.className = 'pill inactive';
+        });
+        pill.className = 'pill active';
+      });
+    });
+
+    // Add to cart feedback
+    document.querySelector('.btn-cart').addEventListener('click', function () {
+      this.textContent = '✓ Added!';
+      this.style.background = '#3a5c2e';
+      setTimeout(() => {
+        this.textContent = 'Add to Cart';
+        this.style.background = '';
+      }, 1800);
+    });
+  </script>
+</body>
+
+</html>
